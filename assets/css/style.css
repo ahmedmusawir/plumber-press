@@ -14150,13 +14150,14 @@ h1, h2, h3, h4, h5 {
 .front-testimonials img {
   margin: 0 auto;
   border-radius: 50%;
+  margin-top: 2rem;
 }
-/* line 230, ../scss/_custom.scss */
+/* line 231, ../scss/_custom.scss */
 .front-testimonials h5 {
   padding-bottom: 2rem;
   position: relative;
 }
-/* line 234, ../scss/_custom.scss */
+/* line 235, ../scss/_custom.scss */
 .front-testimonials h5:after {
   content: '';
   position: absolute;
@@ -14167,9 +14168,10 @@ h1, h2, h3, h4, h5 {
   background: black;
   display: block;
 }
-/* line 247, ../scss/_custom.scss */
+/* line 248, ../scss/_custom.scss */
 .front-testimonials p {
-  padding-top: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   font-family: 'Poiret One', cursive;
 }
 
@@ -14178,14 +14180,14 @@ h1, h2, h3, h4, h5 {
  * Footer Callout
  *
  */
-/* line 259, ../scss/_custom.scss */
+/* line 261, ../scss/_custom.scss */
 .footer-callout {
   background-color: #666666;
   color: #b3b3b3;
   padding-top: 3rem;
   padding-bottom: 1.5rem;
 }
-/* line 265, ../scss/_custom.scss */
+/* line 267, ../scss/_custom.scss */
 .footer-callout a {
   background-color: transparent;
   border: 4px double #01a4b5;
@@ -14196,23 +14198,23 @@ h1, h2, h3, h4, h5 {
  * Footer
  *
  */
-/* line 276, ../scss/_custom.scss */
+/* line 278, ../scss/_custom.scss */
 .the-footer {
   padding-top: 4rem;
   padding-bottom: 2rem;
   background-color: #000c0e;
 }
 
-/* line 284, ../scss/_custom.scss */
+/* line 286, ../scss/_custom.scss */
 .footer-widget {
   color: #EEEEEE;
 }
-/* line 287, ../scss/_custom.scss */
+/* line 289, ../scss/_custom.scss */
 .footer-widget h3 {
   font-variant: small-caps;
   color: #EEEEEE;
 }
-/* line 293, ../scss/_custom.scss */
+/* line 295, ../scss/_custom.scss */
 .footer-widget ul li {
   -webkit-transition: all 0.6s ease-in-out;
   -moz-transition: all 0.6s ease-in-out;
@@ -14222,23 +14224,23 @@ h1, h2, h3, h4, h5 {
   padding-bottom: .5rem;
   list-style: none;
 }
-/* line 300, ../scss/_custom.scss */
+/* line 302, ../scss/_custom.scss */
 .footer-widget ul li:hover {
   background-color: #666666;
 }
-/* line 305, ../scss/_custom.scss */
+/* line 307, ../scss/_custom.scss */
 .footer-widget p {
   padding-top: 1.5rem;
 }
 
-/* line 311, ../scss/_custom.scss */
+/* line 313, ../scss/_custom.scss */
 .copyright {
   padding-top: 1rem;
   padding-bottom: 1rem;
   color: #EEEEEE;
   background-color: #003f45;
 }
-/* line 316, ../scss/_custom.scss */
+/* line 318, ../scss/_custom.scss */
 .copyright p {
   margin-bottom: -.25rem;
   font-size: .8rem;
@@ -14249,11 +14251,11 @@ h1, h2, h3, h4, h5 {
  * Sidebar
  *
  */
-/* line 327, ../scss/_custom.scss */
+/* line 329, ../scss/_custom.scss */
 .sidebar-widget {
   margin-bottom: 2rem;
 }
-/* line 330, ../scss/_custom.scss */
+/* line 332, ../scss/_custom.scss */
 .sidebar-widget .widget-title {
   padding-bottom: 1rem;
 }
@@ -14263,24 +14265,24 @@ h1, h2, h3, h4, h5 {
  * Pages In General
  *
  */
-/* line 345, ../scss/_custom.scss */
+/* line 347, ../scss/_custom.scss */
 .page-header {
   height: 350px;
 }
-/* line 350, ../scss/_custom.scss */
+/* line 352, ../scss/_custom.scss */
 .page-header .page-header-text {
   text-align: center;
   height: 350px;
   background-color: rgba(0, 72, 80, 0.8);
   padding-top: 7.5rem;
 }
-/* line 356, ../scss/_custom.scss */
+/* line 358, ../scss/_custom.scss */
 .page-header .page-header-text h1 {
   font-weight: 700;
   color: #01d2e8;
   position: relative;
 }
-/* line 361, ../scss/_custom.scss */
+/* line 363, ../scss/_custom.scss */
 .page-header .page-header-text h1:after {
   content: '';
   position: absolute;
@@ -14292,24 +14294,24 @@ h1, h2, h3, h4, h5 {
   display: block;
   margin-top: 1rem;
 }
-/* line 374, ../scss/_custom.scss */
+/* line 376, ../scss/_custom.scss */
 .page-header .page-header-text h4 {
   color: #01c9de;
   padding-top: 1.5rem;
 }
 
-/* line 382, ../scss/_custom.scss */
+/* line 384, ../scss/_custom.scss */
 .page-content {
   padding-top: 3rem;
   padding-bottom: 3rem;
   color: grey;
 }
-/* line 387, ../scss/_custom.scss */
+/* line 389, ../scss/_custom.scss */
 .page-content h3, .page-content h4, .page-content h5 {
   color: grey;
   font-weight: 500;
 }
-/* line 391, ../scss/_custom.scss */
+/* line 393, ../scss/_custom.scss */
 .page-content p {
   font-weight: 300;
   font-size: 1.1rem;
@@ -14325,7 +14327,7 @@ h1, h2, h3, h4, h5 {
  * Blocked Drains Page
  *
  */
-/* line 415, ../scss/_custom.scss */
+/* line 417, ../scss/_custom.scss */
 #blocked-drain {
   background: url(img/blocked_drain.jpg) no-repeat top right fixed;
   -webkit-background-size: cover;
@@ -14339,7 +14341,7 @@ h1, h2, h3, h4, h5 {
  * Hot Water Services Page
  *
  */
-/* line 428, ../scss/_custom.scss */
+/* line 430, ../scss/_custom.scss */
 #hot-water {
   background: url(img/hotwater_service.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -14353,7 +14355,7 @@ h1, h2, h3, h4, h5 {
  * Commercial Page
  *
  */
-/* line 441, ../scss/_custom.scss */
+/* line 443, ../scss/_custom.scss */
 #commercial {
   background: url(img/commercial.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -14372,7 +14374,7 @@ h1, h2, h3, h4, h5 {
  * Plumbing Professionals Page
  *
  */
-/* line 468, ../scss/_custom.scss */
+/* line 470, ../scss/_custom.scss */
 #plumbing-pros {
   background: url(img/plumbing_professional.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -14386,7 +14388,7 @@ h1, h2, h3, h4, h5 {
  * Plumbing Service Page
  *
  */
-/* line 482, ../scss/_custom.scss */
+/* line 484, ../scss/_custom.scss */
 #plumbing-service {
   background: url(img/plumbing_services.jpg) no-repeat top right fixed;
   -webkit-background-size: cover;
@@ -14400,7 +14402,7 @@ h1, h2, h3, h4, h5 {
  * Areas Served Page
  *
  */
-/* line 496, ../scss/_custom.scss */
+/* line 498, ../scss/_custom.scss */
 #area-served {
   background: url(img/area_served.jpg) no-repeat top left fixed;
   -webkit-background-size: cover;

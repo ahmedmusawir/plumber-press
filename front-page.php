@@ -136,6 +136,22 @@ $header_slider_shortcode = get_post_meta( $post->ID, $prefix.'header-slides', tr
 <section class="front-testimonials">
   
  <div class="row">
+
+<?php
+ 
+	$args = array(
+	    // Arguments for your query.
+	    'post_type' => 'post',
+	    'category_name' => 'testimonials',
+	    'posts_per_page' => 3,
+	    'orderby' => 'rand'
+	);
+	 
+	// Custom query.
+	$query = new WP_Query( $args );
+?>
+
+
     <ul class="the-orbit" data-orbit data-options="animation:slide;
                   timer_speed: 3000;
                   slide_number: false;
@@ -144,41 +160,33 @@ $header_slider_shortcode = get_post_meta( $post->ID, $prefix.'header-slides', tr
                   navigation_arrows:true;
                   swipe: true;
                   bullets:true;">
-    <li class="small-12 columns">
-      <img class="th" src="http://lorempixel.com/100/100/people/9" alt="">
-      <h3>Jini Dow</h3>
-      <h5>Teacher</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      
-    </li>
-    <li class="small-12 columns">
-      <img class="th" src="http://lorempixel.com/100/100/people/1" alt="">
-      <h3>Jane Dow</h3>
-      <h5>Home Maker</h5>
-     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </li>
-    <li class="small-12 columns">
-      <img class="th" src="http://lorempixel.com/100/100/people/3" alt="">
-      <h3>Bin Laden</h3>
-      <h5>Small Business Owner</h5>
-     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </li>
+
+	<?php if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
+
+		<?php $testimonial_pro = get_post_meta( get_the_ID(), $prefix.'testimonial-pro', true ); ?>
+
+	    <li class="small-12 columns">
+	    
+			<?php the_post_thumbnail('thumbnail', array('class' => 'th')); ?>
+
+		      <h3><?php the_title(); ?></h3>
+		      <h5><?php echo $testimonial_pro;  ?></h5>
+		      <p>
+			     <?php the_content(); ?>
+		      </p>
+	    </li>  
+
+    <?php endwhile; ?>	
+			
+		<?php wp_reset_postdata(); ?>			
+
+	<?php else : ?>
+		<?php get_template_part( 'parts/content', 'missing' ); ?>
+	<?php endif; ?>
+ 
   </ul>
+
+
  </div>
 
 </section>
@@ -219,8 +227,8 @@ $header_slider_shortcode = get_post_meta( $post->ID, $prefix.'header-slides', tr
               </form>
         </p>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-</div>
+	</div>
 
 
 
-<?php get_footer(); ?>
+	<?php get_footer(); ?>
