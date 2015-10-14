@@ -1,0 +1,541 @@
+//Google fonts 
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500,700,600,800,900);
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+// @import url(https://fonts.googleapis.com/css?family=Kaushan+Script);
+//Font Awesome
+@import "font-awesome-compass";
+@import "font-awesome";
+
+// The Bournon
+@import "bourbon/bourbon";
+
+// MY CUSTOM CSS
+html {
+	background-color: white;
+}
+body {
+	display: none;
+	color: black;
+	background-color: white;
+	font-family: 'Raleway', sans-serif;
+
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Raleway', sans-serif;
+}
+
+/**
+ *
+ * Site Header
+ *
+ */
+.top-header {
+
+	.site-contact {
+		padding-top: 1rem;
+		p {
+			color: darken( $primary-color, 5% );
+			margin-bottom: -0.1rem;
+			@media  (min-width: 640px) and (max-width: 787px) {
+				font-size: .7rem;
+				font-weight: 700;
+				
+			}
+			@media  (max-width: 639px) {
+				text-align: center;
+
+			}
+		}
+
+	}
+
+}
+
+/**
+ *
+ * Frontpage Header
+ *
+ */
+
+.front-page-header {
+
+	text-align: center;
+	position: relative;
+
+	.the-orbit {
+		background-color: rgba( darken( $primary-color, 10% ), .8);
+		h1, h4 {
+			position: fixed;
+			color: yellow;
+			left: 40%;
+			right: 50%;
+			top: 50%;
+		}
+
+	}		
+}
+
+/**
+ *
+ * Frontpage Services
+ *
+ */
+.front-services {
+	text-align: center;
+	padding-top: 4rem;
+
+	.front-service-block {
+
+		.front-service-text {
+			min-height: 125px;
+		}
+
+		h4 {
+			font-size: 1.2rem;
+			font-weight: 800;
+			padding-bottom: 1.5rem;
+			color: darken( $primary-color, 20%);
+			position: relative;
+
+			&:after {
+			  content: '';
+		      position:absolute;
+		      bottom: 5;
+		      left: 30%;
+		      right: 30%;
+		      height: 2px;
+		      background:  darken( $primary-color, 20%);;
+		      display:block;
+		      margin-top: 1rem;
+			}
+		}
+	}
+
+	.service-icon {
+		background-color: $primary-color;
+		height: 100%;
+		width: 100%;
+		padding: 2rem;
+		padding-top: 2.7rem;
+		border-radius: 50%;
+
+		i.fa {
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+		}
+
+		a {
+			color: black;
+			@include transition(all 1.0s ease-in-out);
+
+
+			&:hover {
+				color: white;
+			}
+		}
+	}
+}
+
+/**
+ *
+ * Frontpage Top Callout
+ *
+ */
+.front-top-callout {
+	background-color: darken( $primary-color, 25% );
+	text-align: center;
+	padding-top: 3.5rem;
+	padding-bottom: 2rem;
+
+	h3, h4 {
+		color: lighten( $primary-color, 15% );
+	}
+
+	h3 {
+		font-size: 2rem;
+	}
+	h4 {
+		font-size: 1rem;
+	}
+
+	a {
+		background-color: transparent;
+		border: 2px solid $primary-color;
+		margin-top: 1rem;
+	}
+
+	.frontpage-callout-widget {
+		padding-top: 1.5rem;
+	}
+}
+
+/**
+ *
+ * Frontpage Professional Plumber
+ *
+ */
+.front-pro-plumber {
+	text-align: center;
+	
+	position: relative;
+
+	background: url(img/frontpage-pro-plumber-bg-img.jpg) no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+
+
+	 .cover {
+	 	
+	 	background-color: rgba( darken( $primary-color, 10% ), .8);
+		padding-top: 4rem;
+		padding-bottom: 2rem;
+	  
+	 }
+
+	 .row {
+	 	color: white;
+
+	 	h2, h3 {
+	 		color: white;
+	 	}
+	 }
+
+	 a {
+		background-color: transparent;
+		border: 4px solid $primary-color;
+		margin-top: 1rem;
+	}
+}
+
+/**
+ *
+ * Frontpage Testimonials
+ *
+ */
+.front-testimonials {
+	// background-color: $tuatara;
+	background-color: lighten( $alert-color, 5%);
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	text-align: center;
+
+	img {
+		margin: 0 auto;
+		border-radius: 50%;
+	}
+
+	h5 {
+		padding-bottom: 2rem;
+		position: relative;
+
+		&:after {
+		  content: '';
+	      position:absolute;
+	      bottom: 0;
+	      left: 40%;
+	      right: 40%;
+	      height: 2px;
+	      background: black;
+	      display:block;
+	      // margin-bottom: 2rem;
+		}
+	
+	}
+	p {
+		padding-top: 2rem;
+		font-family: 'Poiret One', cursive;
+	}
+
+}
+
+/**
+ *
+ * Footer Callout
+ *
+ */
+.footer-callout {
+	background-color: $steel;
+	color: lighten( grey, 20% );
+	padding-top: 3rem;
+	padding-bottom: 1.5rem;
+
+	a {
+		background-color: transparent;
+		border: 4px double $primary-color;
+	}
+}
+
+/**
+ *
+ * Footer
+ *
+ */
+.the-footer {
+	padding-top: 4rem;
+	padding-bottom: 2rem;
+	// background-color: $oil; 
+	background-color: darken( $primary-color, 33%);
+
+}
+
+.footer-widget {
+	color: $smoke;
+
+	h3 {
+		font-variant: small-caps;
+		color: $smoke;
+	}
+
+	ul {
+		li {
+			@include transition(all 0.6s ease-in-out);
+			border-bottom: 1px solid $primary-color;
+			padding-top: .5rem;
+			padding-bottom: .5rem;
+			list-style: none;
+
+			&:hover {
+				background-color: $steel;
+			}
+		}
+	}
+	p {
+		padding-top: 1.5rem;
+	}
+
+}
+
+.copyright {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	color: $smoke;
+	background-color: darken( $primary-color, 22%);
+	p {
+		margin-bottom: -.25rem;
+		font-size: .8rem;
+	}
+}
+
+/**
+ *
+ * Sidebar
+ *
+ */
+.sidebar-widget {
+		margin-bottom: 2rem;
+
+	.widget-title {
+		padding-bottom: 1rem;
+	}
+	.widget {
+		// padding-bottom: 2rem;
+		// border: 1px solid red;
+	}
+}
+
+
+/**
+ *
+ * Pages In General
+ *
+ */
+.page-header {
+
+	height: 350px;
+	
+ 
+	.page-header-text {
+		text-align: center;
+		height: 350px;
+	 	background-color: rgba( darken( $primary-color, 20% ), .8);
+	 	padding-top: 7.5rem;
+
+	 	h1 {
+	 		font-weight: 700;
+	 		color: lighten( $primary-color, 10% );
+	 		position: relative;
+
+	 		&:after {
+			  content: '';
+		      position:absolute;
+		      bottom: 5;
+		      left: 40%;
+		      right: 40%;
+		      height: 2px;
+		      background:  lighten( $primary-color, 10%);;
+		      display:block;
+		      margin-top: 1rem;
+			}
+
+	 	}
+	 	h4 {
+	 		color: lighten( $primary-color, 8% );
+	 		padding-top: 1.5rem;
+	 	}
+
+	}
+}
+
+.page-content {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	color: grey;
+
+	h3, h4, h5 {
+		color: grey;
+		font-weight: 500;
+	}
+	p {
+		font-weight: 300;
+		font-size: 1.1rem;
+	}
+}
+
+/**
+ *
+ * About Us Page
+ *
+ */
+// #about-us {
+// 	background: url(img/about_us.jpg) no-repeat top center fixed; 
+// 	  -webkit-background-size: cover;
+// 	  -moz-background-size: cover;
+// 	  -o-background-size: cover;
+// 	  background-size: cover;
+// }
+
+/**
+ *
+ * Blocked Drains Page
+ *
+ */
+#blocked-drain {
+	background: url(img/blocked_drain.jpg) no-repeat top right fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+}
+
+/**
+ *
+ * Hot Water Services Page
+ *
+ */
+#hot-water {
+	background: url(img/hotwater_service.jpg) no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+}
+
+/**
+ *
+ * Commercial Page
+ *
+ */
+#commercial {
+	background: url(img/commercial.jpg) no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+}
+
+/**
+ *
+ * Contact Page
+ *
+ */
+// #contact-us {
+// 	background: url(img/contact_us.jpg) no-repeat center center fixed; 
+// 	  -webkit-background-size: cover;
+// 	  -moz-background-size: cover;
+// 	  -o-background-size: cover;
+// 	  background-size: cover;
+// }
+
+/**
+ *
+ * Plumbing Professionals Page
+ *
+ */
+
+#plumbing-pros {
+	background: url(img/plumbing_professional.jpg) no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+}
+
+/**
+ *
+ * Plumbing Service Page
+ *
+ */
+
+#plumbing-service {
+	background: url(img/plumbing_services.jpg) no-repeat top right fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+}
+
+/**
+ *
+ * Areas Served Page
+ *
+ */
+
+#area-served {
+	background: url(img/area_served.jpg) no-repeat top left fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+}
+
+// .off-canvas-wrap, .inner-wrap {
+//     @media (min-width: 768px) {
+//         -webkit-backface-visibility: visible; 
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
