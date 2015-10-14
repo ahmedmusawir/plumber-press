@@ -1,5 +1,14 @@
 <!doctype html>
-
+<?php 
+global $prefix;
+global $footer_btn_lnk;
+global $footer_cta_txt;
+global $footer_btn_txt;
+$prefix = "_plumber_";
+$footer_cta_txt = get_post_meta( $post->ID, $prefix.'footer-cta-txt', true );
+$footer_btn_txt = get_post_meta( $post->ID, $prefix.'footer-btn-txt', true );
+$footer_btn_lnk = get_post_meta( $post->ID, $prefix.'footer-btn-lnk', true );
+?>
   <html class="no-js"  <?php language_attributes(); ?>>
 
 	<head>
@@ -33,6 +42,45 @@
 	</head>
 
 	<body <?php body_class(); ?>>
+
+	<header class="top-header">
+
+<div class="row">
+	<div class="site-title medium-8 columns">
+       <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+		    <?php if ( is_active_sidebar( 'site-logo-widget' ) ) : ?>
+
+			<?php dynamic_sidebar( 'site-logo-widget' ); ?>
+
+			<?php else : ?>
+
+			<!-- This content shows up if there are no widgets defined in the backend. -->
+								
+			<div class="alert help">
+				<p><?php _e("Please activate some Widgets.", "jointstheme");  ?></p>
+			</div>
+
+			<?php endif; ?>
+		</a>
+    </div>
+    <div class="site-contact medium-4 columns">
+			
+			<?php if ( is_active_sidebar( 'header-contact-widget' ) ) : ?>
+
+			<?php dynamic_sidebar( 'header-contact-widget' ); ?>
+
+			<?php else : ?>
+
+			<!-- This content shows up if there are no widgets defined in the backend. -->
+								
+			<div class="alert help">
+				<p><?php _e("Please activate some Widgets.", "jointstheme");  ?></p>
+			</div>
+
+			<?php endif; ?>
+    </div>
+</div>   
+</header>
 		<div class="off-canvas-wrap" data-offcanvas>
 			<div class="inner-wrap">
 				<div id="container">

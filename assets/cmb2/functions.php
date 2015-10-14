@@ -37,25 +37,25 @@ function yourprefix_register_about_page_metabox() {
 	) );
 
 	$cmb->add_field( array(
-		'name' => __( 'Footer Callout Text', 'cmb2' ),
-		'desc' => __( 'Generates Text for Footer Callout', 'cmb2' ),
-		'id'   => $prefix . 'footer-cta-txt',
-		'type' => 'textarea',
-	) );
-
-	$cmb->add_field( array(
-		'name' => __( 'Footer Callout Button Text', 'cmb2' ),
-		'desc' => __( 'Generates Text for Footer Callout Button', 'cmb2' ),
-		'id'   => $prefix . 'footer-btn-txt',
+		'name' => __( 'Frontpage Callout Form Shortcode', 'cmb2' ),
+		'desc' => __( 'Generates Frontpage Callout Enquery form', 'cmb2' ),
+		'id'   => $prefix . 'frontpage-cta-form',
 		'type' => 'text',
 	) );
 
-	$cmb->add_field( array(
-		'name' => __( 'Footer Callout Button Link', 'cmb2' ),
-		'desc' => __( 'Generates Link for Footer Callout Button', 'cmb2' ),
-		'id'   => $prefix . 'footer-btn-lnk',
-		'type' => 'text',
-	) );
+	// $cmb->add_field( array(
+	// 	'name' => __( 'Footer Callout Button Text', 'cmb2' ),
+	// 	'desc' => __( 'Generates Text for Footer Callout Button', 'cmb2' ),
+	// 	'id'   => $prefix . 'footer-btn-txt',
+	// 	'type' => 'text',
+	// ) );
+
+	// $cmb->add_field( array(
+	// 	'name' => __( 'Footer Callout Button Link', 'cmb2' ),
+	// 	'desc' => __( 'Generates Link for Footer Callout Button', 'cmb2' ),
+	// 	'id'   => $prefix . 'footer-btn-lnk',
+	// 	'type' => 'text',
+	// ) );
 
 	
 }

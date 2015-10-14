@@ -4,6 +4,31 @@ function joints_register_sidebars() {
 
 	/**
 	 *
+	 * Site Header w/ Logo and Contact
+	 *
+	 */
+	register_sidebar(array(
+		'id' => 'site-logo-widget',
+		'name' => __('Site Logo Widget', 'jointstheme'),
+		'description' => __('Site Logo Image Widget', 'jointstheme'),
+		'before_widget' => '<div id="%1$s" class="site-logo %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	));
+
+	register_sidebar(array(
+		'id' => 'header-contact-widget',
+		'name' => __('Site Header Contact Widget', 'jointstheme'),
+		'description' => __('Site Header Contact Widget', 'jointstheme'),
+		'before_widget' => '<div id="%1$s" class="header-contact-widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	));
+
+	/**
+	 *
 	 * Frontpage Service Widgets
 	 *
 	 */
@@ -62,6 +87,21 @@ function joints_register_sidebars() {
 		'name' => __('FrontPage Preffesional Plumber Widget', 'jointstheme'),
 		'description' => __('The first contact widget.', 'jointstheme'),
 		'before_widget' => '<div id="%1$s" class="frontpage-pro-widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	));
+
+	/**
+	 *
+	 * Footer Callout
+	 *
+	 */
+	register_sidebar(array(
+		'id' => 'footer-cta',
+		'name' => __('Footer Callout', 'jointstheme'),
+		'description' => __('The footer callout widget.', 'jointstheme'),
+		'before_widget' => '<div id="%1$s" class="footer-cta %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',

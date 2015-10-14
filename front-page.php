@@ -7,6 +7,7 @@
  */
 $prefix = "_plumber_";
 $header_slider_shortcode = get_post_meta( $post->ID, $prefix.'header-slides', true );
+$frontpage_form_shortcode = get_post_meta( $post->ID, $prefix.'frontpage-cta-form', true );
 
 ?>
 
@@ -125,7 +126,7 @@ $header_slider_shortcode = get_post_meta( $post->ID, $prefix.'header-slides', tr
 			<p><?php _e("Please activate some Widgets.", "jointstheme");  ?></p>
 		</div>
 
-	<?php endif; ?>
+		<?php endif; ?>
 
       </div>
 
@@ -194,37 +195,7 @@ $header_slider_shortcode = get_post_meta( $post->ID, $prefix.'header-slides', tr
 <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
  <h3>Enquiry Form</h3>
         <p>
-          <form data-abide>
-
-                  <div>
-                    <label>Name:</label>
-                      <input type="text" name="" value="" placeholder="Name" required>
-                    
-                    <small class="error animated tada">Oops This is Boo Boo</small>
-                  </div>
-                  <div>
-                    <label>Subject:</label>
-                      <input type="text" name="" value="" placeholder="Subject" required>
-                    
-                    <small class="error animated tada">Oops This is Boo Boo</small>
-                  </div>
-                  <div>
-                    <label>Email:</label>
-                      <input type="email" name="" value="" placeholder="Email" required>
-                    
-                    <small class="error animated tada">Oops This is Boo Boo</small>
-                  </div>
-                  <div> 
-                    <label>Your Message:</label>
-                      <textarea name="" rows="20" placeholder="Message" required></textarea>
-                    
-                    <small class="error animated tada">Oops This is Boo Boo</small>
-                  </div>
-                  <div>
-                    <input class="button round" type="submit" name="" value="Send Email">
-                  </div>
-
-              </form>
+        	<?php echo do_shortcode( $frontpage_form_shortcode );  ?>
         </p>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 	</div>

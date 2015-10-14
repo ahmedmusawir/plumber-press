@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {
 	
 	$(document).foundation();			
 
-	$( 'body' ).fadeIn(1000); 
+	$( 'body' ).fadeIn(600); 
 
 	new WOW().init();
 		
