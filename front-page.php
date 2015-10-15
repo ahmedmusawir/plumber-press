@@ -9,17 +9,48 @@ $prefix = "_plumber_";
 $header_slider_shortcode = get_post_meta( $post->ID, $prefix.'header-slides', true );
 $frontpage_form_shortcode = get_post_meta( $post->ID, $prefix.'frontpage-cta-form', true );
 
+/**
+ *
+ * Collecting the Plumber Pro Background Image
+ *
+ */
+
 ?>
+<?php //if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+	<?php 
+		$pro_bg_image_src = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); 
+	?>
+
+<?php //endwhile; endif; ?>
 
 <style type="text/css" media="screen">
 
-.front-pro-plumber {
+/*.front-pro-plumber {
 	background: url('http://plumberpress/wp-content/uploads/2015/10/frontpage-pro-plumber-bg-img.jpg') no-repeat center center fixed; 
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
 	  background-size: cover;
 }
+*/
+
+	img.bg {
+	  /* Set rules to fill background */
+	  min-height: 100%;
+	  min-width: 1024px;
+		
+	  /* Set up proportionate scaling */
+	  width: 100%;
+	  height: auto;
+		
+	  /* Set up positioning */
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+
+	  z-index: -999;
+	}
 
 </style>
 
@@ -30,62 +61,67 @@ $frontpage_form_shortcode = get_post_meta( $post->ID, $prefix.'frontpage-cta-for
   
 </header><!-- /header -->
 
-<section class="front-services row">
-  <div class="medium-4 large-4 columns wow slideInLeft" data-wow-duration="1s" data-wow-delay="0s">
-   
+<section class="front-services">
+  
+  <article class="row">
+  	
+	  <div class="medium-4 large-4 columns wow slideInLeft" data-wow-duration="1s" data-wow-delay="0s">
+	   
 
-			<?php if ( is_active_sidebar( 'frontpage-service-widget-1' ) ) : ?>
+				<?php if ( is_active_sidebar( 'frontpage-service-widget-1' ) ) : ?>
 
-				<?php dynamic_sidebar( 'frontpage-service-widget-1' ); ?>
+					<?php dynamic_sidebar( 'frontpage-service-widget-1' ); ?>
 
-			<?php else : ?>
+				<?php else : ?>
 
-			<!-- This content shows up if there are no widgets defined in the backend. -->
-								
-			<div class="alert help">
-				<p><?php _e("Please activate some Widgets.", "jointstheme");  ?></p>
-			</div>
+				<!-- This content shows up if there are no widgets defined in the backend. -->
+									
+				<div class="alert help">
+					<p><?php _e("Please activate some Widgets.", "jointstheme");  ?></p>
+				</div>
 
-			<?php endif; ?>
+				<?php endif; ?>
 
 
-  </div>
+	  </div>
 
-  <div class="medium-4 large-4 columns">
-    
-			<?php if ( is_active_sidebar( 'frontpage-service-widget-2' ) ) : ?>
+	  <div class="medium-4 large-4 columns">
+	    
+				<?php if ( is_active_sidebar( 'frontpage-service-widget-2' ) ) : ?>
 
-				<?php dynamic_sidebar( 'frontpage-service-widget-2' ); ?>
+					<?php dynamic_sidebar( 'frontpage-service-widget-2' ); ?>
 
-			<?php else : ?>
+				<?php else : ?>
 
-			<!-- This content shows up if there are no widgets defined in the backend. -->
-								
-			<div class="alert help">
-				<p><?php _e("Please activate some Widgets.", "jointstheme");  ?></p>
-			</div>
+				<!-- This content shows up if there are no widgets defined in the backend. -->
+									
+				<div class="alert help">
+					<p><?php _e("Please activate some Widgets.", "jointstheme");  ?></p>
+				</div>
 
-			<?php endif; ?>
+				<?php endif; ?>
 
-  </div>
+	  </div>
 
-  <div class="medium-4 large-4 columns wow slideInRight" data-wow-duration="1s" data-wow-delay="0s">
+	  <div class="medium-4 large-4 columns wow slideInRight" data-wow-duration="1s" data-wow-delay="0s">
 
-  			<?php if ( is_active_sidebar( 'frontpage-service-widget-3' ) ) : ?>
+	  			<?php if ( is_active_sidebar( 'frontpage-service-widget-3' ) ) : ?>
 
-				<?php dynamic_sidebar( 'frontpage-service-widget-3' ); ?>
+					<?php dynamic_sidebar( 'frontpage-service-widget-3' ); ?>
 
-			<?php else : ?>
+				<?php else : ?>
 
-			<!-- This content shows up if there are no widgets defined in the backend. -->
-								
-			<div class="alert help">
-				<p><?php _e("Please activate some Widgets.", "jointstheme");  ?></p>
-			</div>
+				<!-- This content shows up if there are no widgets defined in the backend. -->
+									
+				<div class="alert help">
+					<p><?php _e("Please activate some Widgets.", "jointstheme");  ?></p>
+				</div>
 
-			<?php endif; ?>
-    
-  </div>
+				<?php endif; ?>
+	    
+	  </div>
+
+  </article>
   
 </section>
 
@@ -111,9 +147,14 @@ $frontpage_form_shortcode = get_post_meta( $post->ID, $prefix.'frontpage-cta-for
 
 <section class="front-pro-plumber">
   <div class="cover" >
+
+  <img class="bg" src="<?php echo $pro_bg_image_src; ?>">
+  <!-- <img class="bg" src="/wp-content/uploads/2015/10/frontpage-pro-plumber-bg-img.jpg"> -->
+  <!-- <img class="bg" src="http://localhost/plumber/wp-content/uploads/2015/10/frontpage-pro-plumber-bg-img.jpg"> -->
+
     <article class="row  wow zoomIn" data-wow-duration="1s" data-wow-delay="0s">
       <div class="small-12 columns">
-      
+
       	<?php if ( is_active_sidebar( 'frontpage-pro-widget' ) ) : ?>
 
 		<?php dynamic_sidebar( 'frontpage-pro-widget' ); ?>
